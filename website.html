@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  position: fixed;
+  background: transparent;
+}
+.prt{
+    text-align: center;
+    color: #00ff00;
+    border-bottom: 2px solid #00ff00;
+}
+   .h1{
+      padding:2px 0px;
+      position: relative;
+      top: 200px;
+      left: 100px;
+      text-size-adjust: 30px;
+      text-shadow: 2px 2px 5px red;
+      
+    }
+    .p{
+        color: #666666;
+        text-shadow: 2px 2px 5px red;
+        position: relative;
+        top: 85px;px ;
+        left: 100px;px ;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;    }
+    .h2{
+     position: relative;
+     top: 260px;
+     left: 200px;
+     color: #12d640;
+    }
+  .ul{
+    position: relative;
+    top: 200px;
+    left: 60px;
+    list-style: none;
+    display: flex;
+    gap: 10px; 
+  }
+  .nav-menu a {
+    display: block;
+    position: relative;
+    top: -15px;;
+    color: #696969;
+    font-size: 19px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-decoration: none;  
+  }
+.nav-menu a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #9e7f25;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+    visibility: visible;
+    width: 40px;
+  }
+  
+  .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+    color: #12d640;
+    text-decoration: none;
+  }
+  .fa {
+    position: relative;
+    top: 100px;
+    left: 90px;
+    padding: 0px 10px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  }
+  
+  .fa:hover {
+    opacity: 1;
+    transform: scale(1.5); 
+    
+  }
+  
+  .fa-facebook {
+    background:none;
+    color:none;
+  }
+  
+  .fa-twitter {
+    background:none;
+    color: none;
+  }
+  .fa-linkedin {
+    background: none;
+    color: none;
+  }
+  .fa-instagram {
+    background: none;
+    color: none;
+  }
+  .fa-github{
+    background: none;
+    color: none;
+  }
+  
+    </style>
+</head>
+<body style="background-color: #010e1b;">
+    <header>
+    <div>
+        <h1 class=h2> WEB DEVELOPER </h1>
+        <h1 class="h1">I'm an</h1>
+        <h1 class="p">Udhay K</h1>
+    </div>
+</header>
+        <nav class="nav-menu a">
+        <ul class="ul">
+           <li class="li"><a href="#header">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="#education">Education</a></li>
+           <li><a href="#skills">Skills</a></li>
+           <li><a href="#certificates">Certificates</a></li>
+           <li><a href="#resume">Resume</a></li>
+           <li><a href="#contact">Contact</a></li>
+        </ul>
+        </nav>
+        <div>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <a href="https://www.linkedin.com/in/uday-kanchi-49a522341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-github"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+          </div>
+</body>
+</html>
