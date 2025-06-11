@@ -3,148 +3,478 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Uday's Portfolio</title>
     <style>
         body {
-  font-family: "Open Sans", sans-serif;
-  color: #fff;
-  position: fixed;
-  background: transparent;
-}
-.prt{
-    text-align: center;
-    color: #00ff00;
-    border-bottom: 2px solid #00ff00;
-}
-   .h1{
-      padding:2px 0px;
-      position: relative;
-      top: 200px;
-      left: 100px;
-      text-size-adjust: 30px;
-      text-shadow: 2px 2px 5px red;
-      
-    }
-    .p{
-        color: #666666;
-        text-shadow: 2px 2px 5px red;
-        position: relative;
-        top: 85px;px ;
-        left: 100px;px ;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;    }
-    .h2{
-     position: relative;
-     top: 260px;
-     left: 200px;
-     color: #12d640;
-    }
-  .ul{
-    position: relative;
-    top: 200px;
-    left: 60px;
-    list-style: none;
-    display: flex;
-    gap: 10px; 
-  }
-  .nav-menu a {
-    display: block;
-    position: relative;
-    top: -15px;;
-    color: #696969;
-    font-size: 19px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    text-decoration: none;  
-  }
-.nav-menu a:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #9e7f25;
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-  }
-  
-  .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
-    visibility: visible;
-    width: 40px;
-  }
-  
-  .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-    color: #12d640;
-    text-decoration: none;
-  }
-  .fa {
-    position: relative;
-    top: 100px;
-    left: 90px;
-    padding: 0px 10px;
-  font-size: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  }
-  
-  .fa:hover {
-    opacity: 1;
-    transform: scale(1.5); 
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background-color: #f5f6f5;
+            scroll-behavior: smooth;
+            color: #333333;
+        }
+        nav {
+            background-color: rgb(43, 2, 81);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        nav h1 {
+            font-size: 28px;
+            color: whitesmoke;
+            text-shadow: 5px 2px 2px black;
+            margin: 0;
+            font-weight: normal;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #f4f4f4;
+            font-size: 16px;
+            font-family: 'Helvetica', sans-serif;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #d4a017;
+        }
+        section {
+            padding: 100px 20px;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #home {
+            background: black;
+            color: #ffffff;
+            text-align: left;
+        }
+        #home .container {
+            max-width: 800px;
+        }
+        #home h2 {
+            font-size: 40px;
+            margin-bottom: 16px;
+            font-weight: normal;
+        }
+        #home h1 {
+            font-size: 48px;
+            color: #660099;
+            margin-bottom: 10px;
+        }
+        .uday{
+            color: white;
+        }
+        .p {
+            font-size: 20px;
+            color: #12d640;
+            font-weight: 400px;
+            background: green;
+            border-radius: 50px;
+            padding: 5px;
+            width: 350px;
+        }
+        #home p {
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+        #home a {
+            background-color: gray;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            position: relative;
+            top: 18px;
+            font-family: 'Helvetica', sans-serif;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        #home a:hover {
+            background-color: #b88c14;
+        }
+        
+        #about, #certificates, #contact {
+            background-color: black;
+        }
+        #skills, #interests {
+            background-color: black;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 32px;
+            color: white;
+            text-shadow: 2px 5px 5px rgb(36, 58, 67);
+            margin-bottom: 32px;
+            font-weight: normal;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+        }
+        p {
+            font-size: 16px;
+            color: black;
+            text-shadow: 2px 2px 5px black;
+            font-size: 15px;
+            line-height: 1.8;
+            font-family: 'Georgia', serif;
+        }
+        #about p{
+            color: blueviolet;
+            font-size: 25px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .grid div {
+            background-color: whitesmoke;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 5px 2px 2px black;
+            font-size: 16px;
+            color: #333333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .grid div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background-color: wheat;
+        }
+        #certificates .grid div h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: blueviolet;
+            font-family: 'Helvetica', sans-serif;
+        }
+        #certificates .grid div a {
+            color: #d4a017;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Helvetica', sans-serif;
+        }
+        #certificates .grid div a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: rgb(43, 2, 81);
+            color: #f4f4f4;
+            padding: 24px 20px;
+            text-align: center;
+        }
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .interest-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            line-height: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-family: 'Helvetica', sans-serif;
+            color: #1a2b44;
+        }
+        .interest-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     
-  }
-  
-  .fa-facebook {
-    background:none;
-    color:none;
-  }
-  
-  .fa-twitter {
-    background:none;
-    color: none;
-  }
-  .fa-linkedin {
-    background: none;
-    color: none;
-  }
-  .fa-instagram {
-    background: none;
-    color: none;
-  }
-  .fa-github{
-    background: none;
-    color: none;
-  }
-  
+        }
+        .interest-box .icon {
+            font-size: 24px;
+        }
+        .skills-grid {
+            display: flex;
+            grid-template-columns: 1fr;
+            gap: 150px;
+            max-width: 1000px;
+            margin: 10px;
+            padding: 20px;
+        }
+        .skill-box {
+            background-color: blueviolet;
+            padding: 20px;
+            width: 100px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            font-family:Georgia, 'Times New Roman', Times, serif ;
+            color: #e7e7e7;
+            list-style: none;
+            text-align: center;
+            box-shadow: 10px 5px 5px red;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-box:hover {
+            transform: translateY(-5px);
+           
+        }
+        #skills h2{
+            margin-bottom: 50px;
+            position: relative;
+            bottom: 0px;
+            text-decoration: underline;
+            text-underline-offset:10px ;
+        }
+        #contact .social-links {
+            margin-top: 20px;
+        }
+        #contact .social-links a {
+            color: #d4a017;
+            text-decoration: none;
+            font-family: 'Helvetica', sans-serif;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        #contact .social-links a:hover {
+            text-decoration: underline;
+        }
+        #contact p{
+            color: white;
+            font-size: 20px;
+            line-height: 20px;
+        }
+        @media (max-width: 768px) {
+            #home h2 {
+                font-size: 32px;
+            }
+            #home p {
+                font-size: 16px;
+            }
+            nav ul {
+                gap: 16px;
+                display: none;
+            }
+            nav ul li a {
+                font-size: 14px;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .interests-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .interest-box {
+                font-size: 14px;
+                padding: 15px;
+            }
+              .skills-grid {
+               grid-template-columns: 1fr;
+               gap: 30px;
+               display: grid;
+               padding: 20px;
+            }
+
+        }
     </style>
 </head>
-<body style="background-color: #010e1b;">
-    <header>
-    <div>
-        <h1 class=h2> WEB DEVELOPER </h1>
-        <h1 class="h1">I'm an</h1>
-        <h1 class="p">Udhay K</h1>
-    </div>
-</header>
-        <nav class="nav-menu a">
-        <ul class="ul">
-           <li class="li"><a href="#header">Home</a></li>
-           <li><a href="about.html">About</a></li>
-           <li><a href="#education">Education</a></li>
-           <li><a href="#skills">Skills</a></li>
-           <li><a href="#certificates">Certificates</a></li>
-           <li><a href="#resume">Resume</a></li>
-           <li><a href="#contact">Contact</a></li>
-        </ul>
-        </nav>
-        <div>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <a href="https://www.linkedin.com/in/uday-kanchi-49a522341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fa fa-linkedin"></a>
-            <a href="#" class="fa fa-github"></a>
-            <a href="https://www.instagram.com/its..me..uday?igsh=ZXVrM3NqZHJwNmI3" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-          </div>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1>Uday <span style="color: gold;">Kanchi</span></h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            <h1>Uday <span class="uday"> Kanchi</span></h1>
+            <h2 style="color: blueviolet; text-decoration: none; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">I'm an <span id="element" style="color: gray;"></span></h2>
+            <a href="https://drive.google.com/file/d/1NBFKevGyGkry4HzjxFg3PKRP4TeBVkU5/view?usp=drivesdk" target="_blank" style="background-color: blueviolet;">RESUME</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am <b><span style="color: wheat;">Kanchi Uday Sri Durga Siva Ram Prasad</span></b>, a dedicated <b><span style="color: wheat;">Degree Computer Science Student</span></b> Passionate about technology and innovation, I am actively pursuing my academic journey, focusing on subjects like programming, software development, and web development. With a strong foundation in computer science principles and a drive to solve real-world problems through coding, I am eager to contribute to the ever-evolving tech industry while continuously honing my skills.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <ul class="skills-grid">
+                <li class="skill-box">HTML & CSS</li>
+                <li class="skill-box">JAVASCRIPT</li>
+                <li class="skill-box">REACT JS</li>
+                <li class="skill-box">MONGO DB</li>
+            </ul>
+            <ul class="skills-grid">
+                <li class="skill-box"> C & C++</li>
+                <li class="skill-box">PYTHON</li>
+                <li class="skill-box">GEN AI</li>
+                <li class="skill-box">DATA STRUCTURES</li>
+            </ul>
+            <ul class="skills-grid">
+                <li class="skill-box">MS WORD</li>
+                <li class="skill-box">MS EXCEL</li>
+                <li class="skill-box">CLOUD COMPUTING</li>
+                <li class="skill-box">POWER POINT</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="certificates">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="grid">
+                <div>
+                    <h3>HTML</h3>
+                    <p>Awarded to <b>Uday Kanchi</b> for successfully completing the course from <b>Infosys Springboard.</b></p>
+                    <a href="https://drive.google.com/file/d/1-nqgy4if9_JSfAElwKafewJFTyJA0BE3/view?usp=drivesdk" target="_blank">View Certificate</a>
+                </div>
+                 <div>
+                    <h3>CSS</h3>
+                    <p>Awarded to <b>Uday Kanchi</b> for successfully completing the course from <b>Infosys Springboard.</b></p>
+                    <a href="https://drive.google.com/file/d/1-fPkOhWYADMfbZ5t73i0nzOxeCGkrNm4/view?usp=drivesdk" target="_blank">View Certificate</a>
+                </div>
+                <div>
+                    <h3>C & C++</h3>
+                    <p>Awarded to <b>Uday Kanchi</b> for successfully completing the course from <b>Creativo E-Learning Ltd.</b></p>
+                    <a href="https://drive.google.com/file/d/1-UhZjYyf5XtGStrQwM7zGeyP94sLDpLO/view?usp=drivesdk" target="_blank">View Certificate</a>
+                </div>
+                <div>
+                    <h3>PYTHON ESSENTIALS - 1</h3>
+                    <p>Awarded to <b>Uday Kanchi</b>i for successfully completing the course from <b>Cisco.</b></p>
+                    <a href="https://drive.google.com/file/d/198Y93zzTIihPMvkmknMxFKwVSAKwhntU/view?usp=drivesdk" target="_blank">View Certificate</a>
+                </div>
+               <div>
+                    <h3>PYTHON ESSENTIALS - 2</h3>
+                    <p>Awarded to <b>Uday Kanchi</b> for successfully completing the course from <b>Cisco.</b></p>
+                    <a href="https://drive.google.com/file/d/1N3371YR6PZxfRiJQCksYDSbA1sW33WIV/view?usp=drivesdk" target="_blank">View Certificate</a>
+                </div>
+                <div>
+                    <h3>FINDING NEW CAREER PATHS WITH SQL</h3>
+                    <p>Awarded to <b>Uday Kanchi</b> for successfully completing the course from <b>Linkedin-Learning.</b></p>
+                    <a href="https://drive.google.com/file/d/1-S2EcaQDCsp--tAiqqPgbpabCfuKt50N/view?usp=drivesdk" target="_blank">View Certificate</a>
+                </div>
+                <div>
+                    <h3>SOLUTIONS ARCHITECTURE JOB SIMULATION</h3>
+                    <p>Awarded to <b>Uday Kanchi</b> for successfully completing the course from <b>Forage.</b></p>
+                    <a href="https://drive.google.com/file/d/1-S2EcaQDCsp--tAiqqPgbpabCfuKt50N/view?usp=drivesdk" target="_blank">View Certificate</a>
+                </div>
+                 <div>
+                    <h3>BUSINESS WRITING TECHNIQUES</h3>
+                    <p>Awarded to <b>Uday Kanchi</b> for successfully completing the course from <b>Doanex.</b></p>
+                    <a href="https://drive.google.com/file/d/1-qj7ybHn0T3U2FORDQwSBEG0ajFVTZN7/view?usp=drivesdk" target="_blank">View Certificate</a>
+                </div>
+                 <div>
+                    <h3>GENERATIVE ARTIFICIAL INTELLIGENCE</h3>
+                    <p>Awarded to <b>Uday Kanchi</b> for successfully completing the course from <b>DigiSaksham.</b></p>
+                    <a href="https://drive.google.com/file/d/10IaC7cHsJNNpg4wrz672BZGmzyLSe46I/view?usp=drivesdk" target="_blank">View Certificate</a>
+                </div>
+                 <div>
+                    <h3>MICROSOFT EXCEL</h3>
+                    <p>Awarded to <b>Uday Kanchi</b> for successfully completing the course from <b>DigiSaksham.</b></p>
+                    <a href="https://drive.google.com/file/d/10xnCo1C_PSOsu_3Zfz2aoMFdKyZ8gxVR/view?usp=drivesdk" target="_blank">View Certificate</a>
+                </div>
+                
+               
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests">
+        <div class="container">
+            <h2>Professional Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-box"><span class="icon">🌐</span> Software Development</div>
+                <div class="interest-box"><span class="icon">🧠</span> Machine Learning</div>
+                <div class="interest-box"><span class="icon">👾</span> Cyber Security</div>
+                <div class="interest-box"><span class="icon">🌍</span> Web Development</div>
+                <div class="interest-box"><span class="icon">💻</span> Software Engineering</div>
+                <div class="interest-box"><span class="icon">📊</span> Data Structures</div>
+                <div class="interest-box"><span class="icon">🗯️</span> Cloud Computing</div>
+                <div class="interest-box"><span class="icon">🤖</span> Artificial Intelligence</div>
+                <div class="interest-box"><span class="icon">⚙️</span> DevOps</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Information</h2>
+            <p><b>Feel free to reach out for collaborations or inquiries.</p>
+            <p>Email : sivaram7731@gmail.com</b></p>
+            <p>Phone : 9948517429</b></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/uday-kanchi-49a522341/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/UdhayKanchi" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Uday Kanchi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Front-End Developer', 'Programmer', 'Aditya Student'],
+            typeSpeed: 70,
+            loop : true
+        });
+    </script>
 </body>
 </html>
